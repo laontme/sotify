@@ -20,6 +20,13 @@ class BedListener(private val sotify: Sotify) : Listener {
     @EventHandler
     fun onBedLeave(event: PlayerBedLeaveEvent) {
         if (sotify.config.getBoolean("enabled")) {
+            if (sotify.config.getBoolean("debug")) {
+                sotify.server.broadcast(
+                    sotify.mm.deserialize(
+                        "${event.player.name}: ${event.player.world.time.toString()}"
+                    )
+                )
+            }
             if (event.player.world.time != 0L) {
                 Message(event, sotify).broadcast()
             }

@@ -20,6 +20,8 @@
 
 ### config
 ```yaml
+debug: false
+enabled: true
 messages:
   player-enter-bed: <dark_aqua>[Sotify] <player> is now sleeping (<sleeping>/<needed>, <more> more needed to skip)
   player-leave-bed: <dark_aqua>[Sotify] <player> got out of bed (<sleeping>/<needed>, <more> more needed to skip)

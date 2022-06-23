@@ -10,15 +10,19 @@ import org.bukkit.event.player.PlayerBedLeaveEvent
 class BedListener(private val sotify: Sotify) : Listener {
     @EventHandler
     fun onBedEnter(event: PlayerBedEnterEvent) {
-        if (event.bedEnterResult == PlayerBedEnterEvent.BedEnterResult.OK) {
-            Message(event, sotify).broadcast()
+        if (sotify.config.getBoolean("enabled")) {
+            if (event.bedEnterResult == PlayerBedEnterEvent.BedEnterResult.OK) {
+                Message(event, sotify).broadcast()
+            }
         }
     }
 
     @EventHandler
     fun onBedLeave(event: PlayerBedLeaveEvent) {
-        if (event.player.world.time != 0L) {
-            Message(event, sotify).broadcast()
+        if (sotify.config.getBoolean("enabled")) {
+            if (event.player.world.time != 0L) {
+                Message(event, sotify).broadcast()
+            }
         }
     }
 }

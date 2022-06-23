@@ -17,6 +17,8 @@ class BedListener(private val sotify: Sotify) : Listener {
 
     @EventHandler
     fun onBedLeave(event: PlayerBedLeaveEvent) {
-        Message(event, sotify).broadcast()
+        if (event.player.world.time != 0L) {
+            Message(event, sotify).broadcast()
+        }
     }
 }

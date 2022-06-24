@@ -2,6 +2,7 @@
 [![license](https://img.shields.io/badge/mit_license-black?style=flat)](/LICENSE.md)
 [![bstats](https://img.shields.io/badge/bstats-009688?style=flat)](https://bstats.org/plugin/bukkit/Sotify/15521)
 [![love](https://img.shields.io/badge/made_with_❤-ff3053?style=flat)](https://laont.me/)
+[![ratcus](https://img.shields.io/badge/for_ratcus-d1a334?style=flat&)](https://ratcus.wtf/)
 
 # sotify
 > sleep notifications
